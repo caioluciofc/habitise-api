@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'habitise',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -68,6 +69,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'habitise.wsgi.application'
+AUTH_USER_MODEL = "habitise.User"
 
 
 # Database
@@ -75,8 +77,12 @@ WSGI_APPLICATION = 'habitise.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'habitisedb',
+        'USER': 'postgres',
+        'PASSWORD': 'y02tXayyCSRmZ4y',
+        'HOST': 'localhost',
+        'PORT': '5432'
     }
 }
 

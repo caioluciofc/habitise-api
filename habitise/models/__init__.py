@@ -1,3 +1,3 @@
 from .habits import HabitModel
-from .users import UserModel
+from .user import User
 from .tracked_habits import TrackedHabit

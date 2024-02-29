@@ -7,5 +7,5 @@ class HabitModel(models.Model):
     on the database.
     '''
     
-    name = models.CharField(max_lenght=15, blank=False)
+    name = models.CharField(max_length=15, blank=False)
     created_at = models.DateTimeField(auto_now_add=True)

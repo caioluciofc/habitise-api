@@ -1,1 +1,1 @@
-from .serializer import serialize_model
+from .serializer import *

@@ -1,6 +1,6 @@
 from django.db import models
 
-class TrackedHabit(models.Model):
+class TrackedHabitsModel(models.Model):
     '''This class creates an abstract model that contains the tracked habits
     by the user with the date that the habit was tracked.
     '''

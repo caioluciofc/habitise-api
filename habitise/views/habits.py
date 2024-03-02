@@ -10,7 +10,7 @@ class HabitView(View):
     
     def get(self, request):
         habits = models.HabitModel.objects.all()
-        habits = [helpers.serialize_model(habit) for habit in habits]
+        habits = helpers.serialize_models(habits)
         return HttpResponse(json.dumps(habits), content_type='application/json')
     
     def post(self, request):

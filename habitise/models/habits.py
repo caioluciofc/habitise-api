@@ -7,5 +7,6 @@ class HabitModel(models.Model):
     on the database.
     '''
     
-    name = models.CharField(max_length=15, blank=False)
+    name = models.CharField(max_length=15, blank=False, unique=True)
+    emoji_unicode_hex = models.CharField(max_length=7, null=False)
     created_at = models.DateTimeField(auto_now_add=True)

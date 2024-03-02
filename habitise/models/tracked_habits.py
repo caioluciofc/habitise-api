@@ -9,3 +9,4 @@ class TrackedHabit(models.Model):
     done_at = models.DateTimeField()
     user = models.ForeignKey('User', on_delete=models.PROTECT)
     created_at = models.DateTimeField(auto_now_add=True)
+    

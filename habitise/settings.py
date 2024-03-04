@@ -73,9 +73,9 @@ AUTH_USER_MODEL = "habitise.User"
 
 CORS_ALLOW_ALL_ORIGINS = True
 # CORS_ALLOWED_ORIGINS = [
-#     'http://localhost:3000', 'https://habitise.vercel.app/'
+#     'http://localhost:3000', 'https://habitise.vercel.app'
 # ]
-CSRF_TRUSTED_ORIGINS = ['https://habitise.vercel.app/']
+# CSRF_TRUSTED_ORIGINS = ['https://habitise.vercel.app']
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases

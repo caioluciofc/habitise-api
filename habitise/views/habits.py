@@ -26,4 +26,7 @@ class HabitView(View):
         new_habit = models.HabitModel(name=habit_name, emoji_unicode_hex=habit_emoji_hex)
         new_habit.save()
         
+        user = get_object_or_404(models.User, id=5)
+        user.add_habit(new_habit.id, 'positive')
+        
         return HttpResponse("Habit created successfully.")

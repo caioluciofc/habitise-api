@@ -22,10 +22,10 @@ class TrackHabitView(View):
         tracked_habits_json = helpers.serialize_models(tracked_habits)
         return HttpResponse(json.dumps(tracked_habits_json), content_type='application/json')
     
-    def post(self, request, user_id, month):
+    def post(self, request):
         body = json.loads(request.body)
         
-        required_fields = ['habit_id', 'user_id', 'done_at']
+        required_fields = ['habit_id', 'done_at', 'user_id']
         for field in required_fields:
             if field not in body:
                 return HttpResponse(f"Missing required field: {field}", status=400)
@@ -37,7 +37,7 @@ class TrackHabitView(View):
         new_track = models.TrackedHabitsModel(
             habit_id=habit_id,
             user_id=user_id,
-            done_at=datetime.fromtimestamp(done_at)
+            done_at=done_at
         )
         new_track.save()
         

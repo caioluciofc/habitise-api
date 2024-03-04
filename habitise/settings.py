@@ -29,6 +29,7 @@ CSRF_TRUSTED_ORIGINS = ['https://*.fly.dev']
 
 INSTALLED_APPS = [
     'habitise',
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,6 +46,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'habitise.urls'
@@ -68,6 +71,9 @@ TEMPLATES = [
 WSGI_APPLICATION = 'habitise.wsgi.application'
 AUTH_USER_MODEL = "habitise.User"
 
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000', 'https://habitise.vercel.app/'
+]
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases

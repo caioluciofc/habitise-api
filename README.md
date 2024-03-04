@@ -7,3 +7,9 @@ Possible errors:
 ```
 sudo apt install libpq-dev
 ```
+
+# Run fly postgres locally:
+
+```
+flyctl proxy 5432 -a habitisedb
+```
